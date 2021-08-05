@@ -16,6 +16,7 @@ buttons.addEventListener('click', function (e) {
     counterP.textContent = counter;
   }
   if (e.target.classList.contains('minus')) {
+    if (counter <= 0) return;
     counter--;
     counterP.textContent = counter;
   }
@@ -24,21 +25,3 @@ buttons.addEventListener('click', function (e) {
     counterP.textContent = counter;
   }
 });
-// /////////////////////////////////////////
-// reset.addEventListener('click', function (e) {
-//   e.preventDefault();
-//   counter = 0;
-//   counterP.textContent = counter;
-// });
-
-// plus.addEventListener('click', function (e) {
-//   e.preventDefault();
-//   counter++;
-//   counterP.textContent = counter;
-// });
-
-// minus.addEventListener('click', function (e) {
-//   e.preventDefault();
-//   counter--;
-//   counterP.textContent = counter;
-// });
